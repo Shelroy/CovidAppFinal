@@ -1,0 +1,220 @@
+<%- include('partials/header'); -%>
+
+<div class="container">
+  <h3 class="country"> <%=nameOfCountry%>  Population : <%=population%>
+  </h3>
+  <h1 id="y" class="card-text"></h1>
+  <div class="col-md-3 column container">
+    
+    <!-- heading -->
+    <div class="row" style="margin-top: 4vh;">
+      <h4 class="column-heading"> Daily Numbers</h4>
+      
+    </div>
+
+    <div class="row  small-card-row" style="margin-top: 1vh;">
+
+      <div class="col-md-3 col-6 card-1 bg-warning bg-gradient shadow">
+        <span style="color: #fff;">
+          <i class="fas fa-virus fa-2x"></i>
+        </span>
+        
+      </div>
+      <div class="col-md-9 col-6">
+        <h5 class="daily-numbers"><%=newCases%></h5>
+        <h6 class="small-card-detail">New Cases</h6>
+      </div>
+    </div>
+    <div class="row small-card-row" >
+      <div class="col-md-3 card-1  col-6 shadow bg-danger bg-gradient
+      ">
+        <span style="color: #fff;">
+          <i class="fas fa-procedures fa-2x "></i>
+        </span>
+        
+      </div>
+      <div class="col-md-9 col-6">
+        <h5 class="daily-numbers"><%=newDeaths%></h5>
+
+        <h6 class="small-card-detail">New Deaths</h6>
+      </div>
+    </div>
+
+    <div class="row small-card-row" >
+      <div class="col-md-3 card-1 col-6 bg-info bg-gradient shadow">
+        <span style=" color: #fff;">
+          <i class="fas fa-heartbeat fa-2x "></i>
+        </span>
+        
+      </div>
+      <div class="col-md-9 col-6">
+        <h5 class="daily-numbers"><%=newRecoveries%></h5>
+        <h6 class="small-card-detail">Recovered</h6>
+      </div>
+    </div>
+    <div class="row " style="margin-top: 4vh;">
+      <h4 class="column-heading"> Monthly Numbers</h4>
+      
+    </div>
+
+    <div class=" row small-card-row" >
+      <div class="col-md-3  col-6 card-1 bg-gradient shadow"
+      id = "card-4">
+        <span style=" color: #fff; text-align: center;">
+          <i class="fas fa-virus fa-2x  icon"></i>
+        </span>
+      </div>
+      <div class="col-md-9 col-6">
+        <h5 class="daily-numbers"><%=currentMonthCases%></h5>
+        <h6 class="small-card-detail">New Cases</h6>
+      </div>
+    </div>
+
+
+    <div class=" row small-card-row" >
+      <div class="col-md-3 col-6 card-1 bg-danger bg-gradient shadow">
+        <span style=" color: #fff;">
+          <i class="fas fa-procedures fa-2x"></i>
+
+        </span>
+        
+      </div>
+      <div class="col-md-9 col-6">
+        <h5 class="daily-numbers"><%=currentMonthDeaths%></h5>
+        <h6 class="small-card-detail"> New Deaths</h6>
+      </div>
+    </div>
+    <div class="row small-card-row" >
+      <div class="col-md-3 col-6 card-1 shadow bg-primary bg-gradient">
+        <span style=" color: #fff;">
+          <i class="fas fa-heartbeat fa-2x"></i>
+        </span>
+        
+      </div>
+      <div class="col-md-9 col-6">
+        <h5 class="daily-numbers"><%=currentMonthRecoveries%></h5>
+        <h6 class="small-card-detail">Recoveries</h6>
+      </div>
+    </div>
+    <!-- end of side column -->
+  </div>    
+
+
+
+
+
+
+
+  <div class="row">
+    
+
+          <h3 id="x" hidden><%=population%></h3>
+        
+  
+    <!-- shows the total infected from the virus  -->
+
+    <div class="col-md-4" >
+      <div class="card text-center shadow p-3 mb-5 bg-warning bg-gradient rounde">
+
+        <div class="card-body">
+
+          <h3 class="card-title" id="test">Total Infected </h3>
+          <div class="row">
+            <div class="col icons">
+
+              <span style=" color: #fff;">
+                <i class="fas fa-virus fa-4x "></i>
+              </span>
+            </div>
+
+            <div class="col">
+              <h1 class="card-text"><%=amountInfected%> </h1>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+        <!-- shows the total infected from the virus ends here -->
+<!-- shows the total amount recovered from the virus -->
+    <div class="col-md-4">
+      <div class="card text-center shadow p-3 mb-5 rounde bg-primary bg-gradient">
+        <div class="card-body">
+          <h3 class="card-title">Total Recovered</h3>
+          <div class="row">
+            <div class="col icons">
+
+              <span style=" color: #fff;">
+                <i class="fas fa-heartbeat fa-4x "></i>
+              </span>
+
+            </div>
+
+            <div class="col">
+              <h1 class="card-text"> <%=amountRecovered%> </h1>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <!-- shows the total amount recovered from the virus ends here -->
+
+
+    <!-- shows the total deathfrom the virus ends here -->
+
+    <div class="col-md-4">
+      <div class="card text-center shadow p-3 mb-5 
+
+      rounde bg-danger bg-gradient">
+
+        <div class="card-body">
+          <h3 class="card-title">Total Death</h3>
+          <div class="row">
+            <div class="col icons">
+              <span style=" color: #fff;">
+                <i class="fas fa-procedures fa-4x "></i>
+              </span>
+            </div>
+            <div class="col">
+              <h1 class="card-text"> <%=amountDead%></h1>
+            </div>
+
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+        <!-- shows the total death from the virus ends here -->
+    <!-- detail column -->
+    <!-- display the top death total for the last 7 days  -->
+    <div class="row chartStyle" >
+      <div class="col-lg-12 chartStyle">
+    
+    <div class="lineChart ">
+      <canvas id="lineChart">
+        
+      </canvas>
+        <!-- <h2 id="z" hidden><%=weeklyDeath%></h2> -->
+        <h2 id="z" hidden><%=dailyInfected%>
+        </h2>
+    </div>
+      </div>
+      </div>
+      <!-- canvas for chart beneath line chart -->
+      <!-- <div class="row chartStyle">
+        <div class="col-md-12 ">
+          <div class="myChart">
+            <canvas id="chart"></canvas>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+<!-- end of row  -->
+<%- include('partials/footer'); -%>
